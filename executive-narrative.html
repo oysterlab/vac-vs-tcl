@@ -504,8 +504,8 @@
     설치 필요. API key 필요. 사용자 환경에 종속.
   </p>
   <div class="callout">
-    인지와 기대는 빠르게 확산됐지만,<br>
-    실제 사용은 제한적
+    "이런 게 있다"는 빠르게 퍼졌지만,<br>
+    실제로 쓰는 사람은 제한적
   </div>
 </section>
 
@@ -594,10 +594,10 @@
     가장 낮은 진입 장벽.
   </p>
   <div class="divider"></div>
-  <p class="label" style="margin-top:40px;margin-bottom:8px;">실행형 AI에 대한 사용자 인식</p>
+  <p class="label" style="margin-top:40px;margin-bottom:8px;">실행형 AI, 사용자는 어디에 있는가</p>
   <p class="secondary-text" style="margin-top:0;">
-    OpenClaw 이후, 실행형 AI의 존재를 아는 사용자는 빠르게 늘고 있지만<br>
-    실제로 사용하고 있는 사용자는 극소수.
+    OpenClaw 이후, "AI가 대신 해준다"는 걸 아는 사람은 빠르게 늘고 있지만<br>
+    직접 써본 사람은 극소수.
   </p>
   <div class="user-flow">
     <span class="step">알고 있음</span>
@@ -606,9 +606,6 @@
     <span class="arrow">&rarr;</span>
     <span class="step blocked">못 쓰고 있음</span>
   </div>
-  <p class="secondary-text" style="margin-top:16px;font-size:15px;">
-    TV가 이 간극을 메울 수 있는 디바이스.
-  </p>
 </section>
 
 <!-- Slide 8: 비용 문제 -->
@@ -644,9 +641,16 @@
   <p class="label">전략 제안</p>
   <h2>BYO AI — Bring Your Own AI</h2>
   <p class="secondary-text" style="margin-top:16px;">
-    사용자가 자신의 AI 모델(ChatGPT, Claude, Gemini 등)을<br>
-    API key를 통해 TV에 직접 연결하는 구조.<br>
-    VD는 모델을 제공하지 않고, <strong style="font-weight:600;color:var(--black)">Agent 실행 환경만 제공</strong>.
+    사용자가 기존에 쓰고 있던 AI 서비스(ChatGPT, Claude, Gemini 등)를<br>
+    OAuth 로그인 등으로 TV에 연결하는 구조.<br>
+    VD는 AI 모델을 제공하지 않고, <strong style="font-weight:600;color:var(--black)">Agent 실행 환경만 제공</strong>.
+  </p>
+  <div class="divider"></div>
+  <h3 style="margin-top:24px;">Agent Runtime이란?</h3>
+  <p class="secondary-text" style="margin-top:8px;">
+    AI 모델이 "생각"하는 엔진이라면, Agent Runtime은 "실행"하는 엔진.<br>
+    사용자의 요청을 받아서, 어떤 도구를 쓸지 결정하고, 실제 작업을 수행하고,<br>
+    결과를 돌려주는 전체 흐름을 관리하는 시스템.
   </p>
   <div class="divider"></div>
   <p class="big-statement" style="margin-top:24px;">
@@ -660,7 +664,7 @@
     </div>
     <div class="structure-row">
       <span class="structure-owner">User</span>
-      <span class="structure-items">AI 모델 선택 <span>&middot;</span> API key <span>&middot;</span> LLM 비용</span>
+      <span class="structure-items">AI 서비스 계정 연결 <span>&middot;</span> 모델 비용</span>
     </div>
   </div>
   <div class="callout" style="margin-top:32px;">
