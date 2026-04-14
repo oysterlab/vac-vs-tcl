@@ -594,14 +594,21 @@
     가장 낮은 진입 장벽.
   </p>
   <div class="divider"></div>
-  <p class="label" style="margin-top:40px;margin-bottom:16px;">현재 사용자 상태</p>
+  <p class="label" style="margin-top:40px;margin-bottom:8px;">실행형 AI에 대한 사용자 인식</p>
+  <p class="secondary-text" style="margin-top:0;">
+    OpenClaw 이후, 실행형 AI의 존재를 아는 사용자는 빠르게 늘고 있지만<br>
+    실제로 사용하고 있는 사용자는 극소수.
+  </p>
   <div class="user-flow">
     <span class="step">알고 있음</span>
     <span class="arrow">&rarr;</span>
     <span class="step">해보고 싶음</span>
     <span class="arrow">&rarr;</span>
-    <span class="step blocked">하지만 못 쓰고 있음</span>
+    <span class="step blocked">못 쓰고 있음</span>
   </div>
+  <p class="secondary-text" style="margin-top:16px;font-size:15px;">
+    TV가 이 간극을 메울 수 있는 디바이스.
+  </p>
 </section>
 
 <!-- Slide 8: 비용 문제 -->
@@ -610,20 +617,39 @@
   <p class="label">비용 구조</p>
   <h2>동일한 접근은<br>비용 구조가 맞지 않음</h2>
   <p class="secondary-text">
-    C-Brand 방식은 모델 비용 + 실행 비용 전부를<br>
-    플랫폼이 부담하는 구조.
+    C-Brand는 모델 비용 + 실행 비용 전부를 플랫폼이 부담.<br>
+    이것이 가능한 이유:
   </p>
-  <div class="callout" style="border-left-color:var(--red);">
-    VD이 동일한 구조를 따르면<br>
-    비용 리스크가 큼
+  <ol class="strategy-list" style="margin-top:24px;">
+    <li>
+      <span class="num">C-Brand</span>
+      <p class="title">자체 모델(소형 LLM) 보유 + 클라우드 인프라 내재화</p>
+      <p class="desc">Huawei: Pangu 모델 + Huawei Cloud. Xiaomi: MiLM + 자체 서버. 모델 운영 비용을 자사 인프라로 흡수</p>
+    </li>
+    <li>
+      <span class="num">VD</span>
+      <p class="title">자체 LLM 없음. 외부 모델 의존 시 비용이 사용량에 비례</p>
+      <p class="desc">TV 사용자 수 x API 호출 비용 = 통제 불가능한 비용 구조. 동일한 방식은 성립하지 않음</p>
+    </li>
+  </ol>
+  <div class="callout" style="border-left-color:var(--red);margin-top:32px;">
+    구조를 바꿔야 함.<br>
+    비용 구조가 다르면, 전략도 달라야 한다.
   </div>
 </section>
 
-<!-- Slide 9: 제안 — 구조 전환 -->
+<!-- Slide 9: 제안 — BYO AI -->
 <section class="slide" data-slide="9">
   <span class="slide-number">09 / 12</span>
   <p class="label">전략 제안</p>
-  <p class="big-statement">
+  <h2>BYO AI — Bring Your Own AI</h2>
+  <p class="secondary-text" style="margin-top:16px;">
+    사용자가 자신의 AI 모델(ChatGPT, Claude, Gemini 등)을<br>
+    API key를 통해 TV에 직접 연결하는 구조.<br>
+    VD는 모델을 제공하지 않고, <strong style="font-weight:600;color:var(--black)">Agent 실행 환경만 제공</strong>.
+  </p>
+  <div class="divider"></div>
+  <p class="big-statement" style="margin-top:24px;">
     모델은 사용자,<br>
     <span class="accent">Agent 경험과 데이터는 VD</span>
   </p>
@@ -634,20 +660,9 @@
     </div>
     <div class="structure-row">
       <span class="structure-owner">User</span>
-      <span class="structure-items">LLM 비용 <span>(</span>API 기반<span>)</span></span>
+      <span class="structure-items">AI 모델 선택 <span>&middot;</span> API key <span>&middot;</span> LLM 비용</span>
     </div>
   </div>
-  <div class="divider"></div>
-  <h3 style="margin-top:32px;">BYO AI란?</h3>
-  <p class="secondary-text" style="margin-top:12px;">
-    <strong style="font-weight:600;color:var(--black)">Bring Your Own AI</strong> — 사용자가 자신의 AI 모델(ChatGPT, Claude, Gemini 등)을<br>
-    API key를 통해 직접 연결하는 구조.<br>
-    플랫폼은 모델을 제공하지 않고, <strong style="font-weight:600;color:var(--black)">실행 환경만 제공</strong>.
-  </p>
-  <p class="secondary-text" style="margin-top:16px;">
-    C-Brand처럼 모델 비용까지 플랫폼이 부담하는 구조 대신,<br>
-    VD는 Agent 실행 환경과 사용자 데이터를 소유하는 것에 집중.
-  </p>
   <div class="callout" style="margin-top:32px;">
     모델을 소유하지 않아도,<br>
     Agent 플랫폼은 확보 가능
@@ -658,7 +673,7 @@
 <section class="slide" data-slide="10">
   <span class="slide-number">10 / 12</span>
   <p class="label">토론</p>
-  <h2>우리가 선택해야 할 전략 방향</h2>
+  <h2>우리가 결정해야 할 것</h2>
   <ol class="strategy-list">
     <li>
       <span class="num">Q1</span>
@@ -667,18 +682,18 @@
     </li>
     <li>
       <span class="num">Q2</span>
-      <p class="title">BYO AI (사용자 모델 연결) 구조를 기본으로 할 것인가?</p>
-      <p class="desc">Dual 구조 (기본 AI + 고급 BYO) vs BYO AI 단일 구조. 비용과 UX 트레이드오프</p>
+      <p class="title">BYO AI 온보딩을 어떻게 설계할 것인가?</p>
+      <p class="desc">사용자에게 API key 입력을 요구하는 것은 높은 허들. TV 리모컨 환경에서 어떻게 자연스럽게 연결시킬 수 있는가</p>
     </li>
     <li>
       <span class="num">Q3</span>
-      <p class="title">데이터 축적 전략은?</p>
-      <p class="desc">사용자 intent, 행동 패턴, Memory를 어떤 형태로 축적하고 활용할 것인가</p>
+      <p class="title">킬러 시나리오는 무엇인가?</p>
+      <p class="desc">사용자가 BYO AI를 처음 연결했을 때, "이것 때문에 연결할 가치가 있다"고 느낄 첫 경험은 무엇이어야 하는가</p>
     </li>
     <li>
       <span class="num">Q4</span>
-      <p class="title">경쟁사 대비 차별화 포인트는?</p>
-      <p class="desc">TV라는 디바이스 특성을 어떻게 Agent 경험의 우위로 전환할 것인가</p>
+      <p class="title">데이터 축적 전략은?</p>
+      <p class="desc">사용자 intent, 행동 패턴, Memory를 어떤 형태로 축적하고 활용할 것인가</p>
     </li>
   </ol>
 </section>
